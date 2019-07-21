@@ -1,4 +1,4 @@
-# tinydb-config
+# tinydb-dict
 Simple dict-like class for TinyDB
 
 ## Usage
@@ -8,17 +8,17 @@ from tinydb.storages import MemoryStorage
 from tinydb_dict import TinyDBDict
 
 # Pass any TinyDB argument to TinyDBDict
-config = TinyDBDict('db.json')
-config = TinyDBDict(storage=MemoryStorage)
+db_dict = TinyDBDict('db.json')
+db_dict = TinyDBDict(storage=MemoryStorage)
 
 # Then use it as a dictionary
-config['key'] = 1
-config['key']  # 1
-config['key'] = 2
-config['key']  # 2
-config['unknown_key']  # KeyError: 'unknown_key'
+db_dict['key'] = 1
+db_dict['key']  # 1
+db_dict['key'] = 2
+db_dict['key']  # 2
+db_dict['unknown_key']  # KeyError: 'unknown_key'
 
 # You can also pass a TinyDB instance
 db = TinyDB('db.json')
-config = TinyDBDict(tinydb=db)
+db_dict = TinyDBDict(tinydb=db)
 ```
