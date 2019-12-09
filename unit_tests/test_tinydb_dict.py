@@ -73,3 +73,8 @@ class TestTinyDBDict:
         with raises(KeyError):
             # noinspection PyStatementEffect
             db_dict['item_not_in_db']
+
+    # noinspection PyTestParametrized
+    @mark.parametrize('tinydb', [[('key1', 1), ('key2', 2)]], indirect=True)
+    def test_length(self, db_dict):
+        assert len(db_dict) == 2

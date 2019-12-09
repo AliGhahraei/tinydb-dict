@@ -31,7 +31,7 @@ class TinyDBDict(abc.MutableMapping):
         raise NotImplementedError
 
     def __len__(self) -> int:
-        raise NotImplementedError
+        return len(self._client)
 
     def __repr__(self):
         return f'{self.__class__.__name__}({self._client})'
