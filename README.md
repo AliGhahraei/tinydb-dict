@@ -1,3 +1,8 @@
+# NO LONGER MAINTAINED
+I simply use [tomlkit](https://github.com/sdispater/tomlkit) to store settings/data/configs nowadays.
+
+-------------------------------------------------------------
+
 # tinydb-dict
 Simple dict-like class for TinyDB
 
